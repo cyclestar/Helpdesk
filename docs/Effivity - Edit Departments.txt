@@ -1,0 +1,34 @@
+2
+
+Effivity
+
+Edit Departments
+
+Abstract
+
+This document guides the users to edit departments in Effivity.
+
+Effivity Tech Support
+techsupport@effivity.com
+
+Please follow the below instructions to edit Departments. IT is edited as Information Technology in the below example.
+
+Navigate to the Departments Screen under the HR section.
+
+Click on “Edit” option of the department that you would like to edit.
+
+Click on the Org Unit path.
+
+Right click on required department to Edit it.
+
+Enter your new department’s name and save it.
+
+Select any other department and then the Edited Department and click on close to close the pop up. (Unselect and select)
+
+Enter the details such as profile and Department HOD.
+
+Submit the department.
+
+After completing this, the edited department will be available for you in all the screens having department field.
+
+We hope this document helped you!

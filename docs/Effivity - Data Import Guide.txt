@@ -1,0 +1,59 @@
+3
+
+3
+
+1
+
+1
+
+4
+
+4
+
+EFFIVITY
+
+Data Import in Effivity
+
+Abstract
+
+This document guides the users to import data in Effivity.
+
+Effivity Tech Support
+
+techsupport@effivity.com
+
+Note: Importing data is basically dumping the data into the system, this will not follow any workflows and validations. No records should be in the status of Pending during data import.
+
+Please follow below steps for importing the data.
+
+	Navigate to the workflow master of the required screen and open Import settings.
+
+	Select the field which will be unique for each record and save changes.
+
+Example: Supplier email in supplier Registration, Employee mail in Employee screen.
+
+Note: If two rows in the import Excel have the same data in the unique key field, the former will be overwritten by the later.
+
+	Select all the fields which you would like to import in the index views through workflow master.
+
+Note: Serial Number is mandatory to be selected.
+
+	Go the required screen and download the import template through settings menu.
+
+	Fill the appropriate data corresponding to the fields in the workbook and save.
+
+Note: Make sure that the Unique key field is unique for all the rows.
+
+Serial number will be taken care by the system.
+
+Enter the name of the File that need to be imported along with its extension.
+
+	Upload the saved workbook, along with the files in supporting files tab through Import from excel option and choose “Import”.
+
+	You will receive a mail regarding the import status after the import process.
+
+	All valid rows in the workbook, will be created as a new entry in the screen.
+
+Existing data if any will be updated during the import, based on unique key configuration.
+
+	We hope this document was helpful.

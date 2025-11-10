@@ -1,0 +1,46 @@
+
+[2025-11-05 06:33:15]
+Q: 
+Context used: Effivity Pro - Reset Password.txt, Effivity - Data Import Guide.txt
+A: I'm an Effivity support assistant. How can I assist you today?
+--------------------------------------------------------------------------------
+
+[2025-11-05 06:35:57]
+Q: don't know passwrd
+Docs used: Effivity Pro - Reset Password.txt, Effivity - Create New Users.txt
+A: I'd be happy to help you with your password issue. However, the documentation provided only covers how to reset passwords through the Effivity domain page and how to create new users in Effivity.
+
+Since you mentioned you don't know your password, I recommend following the steps in the "Reset Password" document. Here's a simplified version:
+
+1. Go to the Effivity domain page by opening the URL: https://www.effivity.com/WebApp/account/domain
+2. Enter your respective domain
+3. Choose the "Forgot Password" option
+4. Enter your email ID and submit
+5. A password reset link will be sent to the email you entered
+
+Please follow these steps to reset your password. If you have any further issues or concerns, feel free to reach out to Effivity Tech Support at support@effivity.com.
+--------------------------------------------------------------------------------
+
+[2025-11-05 06:46:15]
+Q: pw reset
+A: Based on the provided documentation, to reset your password in Efficity, please follow these steps:
+
+1. Open the Effivity domain page by navigating to the URL: https://www.effivity.com/WebApp/account/domain
+2. Enter your respective domain.
+3. Choose the 'Forgot Password' option.
+4. Enter your respective mail ID and submit.
+5. A password reset link will be sent to the entered mail.
+
+You can then use the link sent through email to reset your password.
+
+Please note that if you have trouble with these steps or need further assistance, feel free to reach out to Effivity Tech Support at support@effivity.com.
+--------------------------------------------------------------------------------
+
+[2025-11-05 06:46:22]
+Q: no link in my mail
+A: It seems like you're following the steps to reset your password in Effivity, but you're not receiving a password reset link in your email.
+
+Unfortunately, the provided documentation doesn't specify what could be causing this issue or how to troubleshoot it. 
+
+I would recommend reaching out to Effivity Tech Support at support@effivity.com. They should be able to assist you further with this problem and provide additional guidance on how to reset your password or investigate why you're not receiving a password reset link.
+--------------------------------------------------------------------------------

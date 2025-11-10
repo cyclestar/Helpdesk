@@ -1,0 +1,26 @@
+2
+
+Effivity Pro
+
+Create New Users
+
+Abstract
+
+This document guides the users to create new users in Effivity.
+
+Effivity Tech Support
+techsupport@effivity.com
+
+Please follow the instructions below to add new users in Effivity.
+
+Navigate to the Employee Screen under the HR section.
+
+Click on “Add New” option.
+
+Fill in the required details.
+
+Check on the “Activate login” check box and submit.
+
+The respective user will receive their login credentials through their mail.
+
+We hope this document has helped you!
