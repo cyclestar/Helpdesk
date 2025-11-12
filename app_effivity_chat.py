@@ -3,6 +3,18 @@ import os
 from groq import Groq
 from sentence_transformers import SentenceTransformer, util
 
+# --- Branding Section ---
+st.set_page_config(page_title="Effivity Helpdesk AI", page_icon="💡", layout="centered")
+
+st.image("assets/effivity_logo.png", width=160)
+st.markdown(
+    """
+    ### Welcome to **Effivity Helpdesk AI** 💬  
+    Your smart assistant to find answers instantly from Effivity documentation, SOPs, and guides.
+    """
+)
+st.divider()
+
 # ---- Load Docs ----
 DOCS_FOLDER = "docs"
 def load_docs():
