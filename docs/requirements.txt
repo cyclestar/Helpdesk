@@ -1,5 +1,0 @@
-streamlit
-groq
-sentence-transformers
-torch
-transformers
