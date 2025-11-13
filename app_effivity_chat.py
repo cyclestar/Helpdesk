@@ -46,7 +46,7 @@ st.markdown(
 )
 
 # --------------------------
-# 2. Fixed Header (Always Visible + Reset Button)
+# Fixed Header (Clean, Aligned, and Non-breaking)
 # --------------------------
 st.markdown(
     """
@@ -56,37 +56,54 @@ st.markdown(
             top: 0;
             left: 0;
             right: 0;
-            height: 85px;
-            background-color: #f0f2f6;
+            height: 90px;
+            background: linear-gradient(90deg, #e9f1ff, #f8fbff);
             border-bottom: 1px solid #dcdcdc;
-            text-align: center;
-            z-index: 1000;
-            padding-top: 6px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+        .fixed-header h3 {
+            margin: 0;
+            color: #222;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .fixed-header img {
+            height: 50px;
         }
         .main-content {
-            margin-top: 110px; /* pushes content below fixed header */
+            margin-top: 110px; /* push chat content below fixed header */
         }
         .reset-btn {
-            position: absolute;
-            top: 22px;
-            right: 40px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 5px 10px;
+            cursor: pointer;
         }
     </style>
 
     <div class="fixed-header">
-        <img src="https://raw.githubusercontent.com/cyclestar/Helpdesk/main/assets/effivity_logo.png" width="140">
-        <h3 style="margin:2px; color:#333;">Effivity Helpdesk AI</h3>
+        <div style="display:flex; align-items:center; gap:10px;">
+            <img src="https://raw.githubusercontent.com/cyclestar/Helpdesk/main/assets/effivity_logo.png">
+            <h3>Effivity Helpdesk AI</h3>
+        </div>
+        <form action="#" method="get">
+            <button class="reset-btn" type="submit" name="reset" value="true">🔄 Reset Chat</button>
+        </form>
     </div>
     """,
     unsafe_allow_html=True,
 )
 
-# Add reset chat button
-reset_col = st.columns([5, 1])
-with reset_col[1]:
-    if st.button("🔄 Reset Chat", key="reset"):
-        st.session_state.history = []
-        st.experimental_rerun()
+# Detect reset click and clear chat
+if st.query_params.get("reset") == ["true"]:
+    st.session_state.history = []
+    st.experimental_set_query_params()  # clears URL param
+    st.experimental_rerun()
 
 st.markdown("<div class='main-content'>", unsafe_allow_html=True)
 
