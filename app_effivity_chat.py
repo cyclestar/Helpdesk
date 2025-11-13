@@ -46,17 +46,21 @@ st.markdown(
 )
 
 # --------------------------
-# Fixed Header (Clean, Aligned, and Non-breaking)
+# Fixed Header (Visible and Non-overlapping)
 # --------------------------
 st.markdown(
     """
     <style>
+        /* Adjust Streamlit's default top space */
+        .block-container {
+            padding-top: 130px !important;
+        }
         .fixed-header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            height: 90px;
+            height: 85px;
             background: linear-gradient(90deg, #e9f1ff, #f8fbff);
             border-bottom: 1px solid #dcdcdc;
             z-index: 999;
@@ -64,6 +68,10 @@ st.markdown(
             align-items: center;
             justify-content: space-between;
             padding: 0 40px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        .fixed-header img {
+            height: 50px;
         }
         .fixed-header h3 {
             margin: 0;
@@ -71,18 +79,15 @@ st.markdown(
             font-size: 22px;
             font-weight: 600;
         }
-        .fixed-header img {
-            height: 50px;
-        }
-        .main-content {
-            margin-top: 110px; /* push chat content below fixed header */
-        }
         .reset-btn {
             background-color: #f8f9fa;
             border: 1px solid #ddd;
             border-radius: 6px;
-            padding: 5px 10px;
+            padding: 6px 10px;
             cursor: pointer;
+        }
+        .reset-btn:hover {
+            background-color: #eef3ff;
         }
     </style>
 
@@ -99,13 +104,11 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Detect reset click and clear chat
+# Handle reset logic
 if st.query_params.get("reset") == ["true"]:
     st.session_state.history = []
-    st.experimental_set_query_params()  # clears URL param
+    st.experimental_set_query_params()
     st.experimental_rerun()
-
-st.markdown("<div class='main-content'>", unsafe_allow_html=True)
 
 
 # --------------------------
