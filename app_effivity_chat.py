@@ -117,19 +117,7 @@ if not st.session_state.history:
         "👋 Hi, I’m your **Effivity Helpdesk AI Assistant**. Ask me anything about Effivity features, workflows, or setup."
     )
 
-# --------------------------
-# Reset Chat + Chat Input
-# --------------------------
-# Create a small section above the input for reset
-reset_col = st.columns([5, 1])
-with reset_col[1]:
-    if st.button("🔄 Reset Chat", key="reset_chat_fixed"):
-        st.session_state.history = []
-        st.experimental_rerun()
-
-# Chat input field (normal position)
 query = st.chat_input("Type your question here...")
-
 
 if query:
     matches = semantic_search(query, model, docs, embeddings)
@@ -143,8 +131,6 @@ if query:
 # Display chat messages
 for msg in st.session_state.history:
     if msg["role"] == "user":
-        st.markdown(f"<div class='chat-box user-msg'>🧑‍💼 {msg['content']}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='chat-box user-msg'>{msg['content']} 🧑‍💼</div>", unsafe_allow_html=True)
     else:
-        st.markdown(f"<div class='chat-box ai-msg'>🤖 {msg['content']}</div>", unsafe_allow_html=True)
-
-
+        st.markdown(f"<div class='chat-box ai-msg'>💡 {msg['content']}</div>", unsafe_allow_html=True)
