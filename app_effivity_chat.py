@@ -134,3 +134,10 @@ for msg in st.session_state.history:
         st.markdown(f"<div class='chat-box user-msg'>🧑‍💼 {msg['content']}</div>", unsafe_allow_html=True)
     else:
         st.markdown(f"<div class='chat-box ai-msg'>🤖 {msg['content']}</div>", unsafe_allow_html=True)
+
+        # Add Reset Chat button inside the chat area
+with st.container():
+    if st.button("🔄 Reset Chat", key="reset_chat"):
+        st.session_state.history = []
+        st.experimental_rerun()
+
