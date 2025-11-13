@@ -50,7 +50,7 @@ st.markdown(
 # --------------------------
 st.markdown(
     """
-    <div class="fixed-header">
+    <div class="fixed-header" position: sticky; top: 0;>
         <img src="https://raw.githubusercontent.com/cyclestar/Helpdesk/main/assets/effivity_logo.png" width="120">
         <h3>Effivity Helpdesk AI</h3>
     </div>
