@@ -46,70 +46,17 @@ st.markdown(
 )
 
 # --------------------------
-# Fixed Header (Visible and Non-overlapping)
+# 2. Fixed Header
 # --------------------------
 st.markdown(
     """
-    <style>
-        /* Adjust Streamlit's default top space */
-        .block-container {
-            padding-top: 130px !important;
-        }
-        .fixed-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 85px;
-            background: linear-gradient(90deg, #e9f1ff, #f8fbff);
-            border-bottom: 1px solid #dcdcdc;
-            z-index: 999;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 40px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-        }
-        .fixed-header img {
-            height: 50px;
-        }
-        .fixed-header h3 {
-            margin: 0;
-            color: #222;
-            font-size: 22px;
-            font-weight: 600;
-        }
-        .reset-btn {
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            padding: 6px 10px;
-            cursor: pointer;
-        }
-        .reset-btn:hover {
-            background-color: #eef3ff;
-        }
-    </style>
-
     <div class="fixed-header">
-        <div style="display:flex; align-items:center; gap:10px;">
-            <img src="https://raw.githubusercontent.com/cyclestar/Helpdesk/main/assets/effivity_logo.png">
-            <h3>Effivity Helpdesk AI</h3>
-        </div>
-        <form action="#" method="get">
-            <button class="reset-btn" type="submit" name="reset" value="true">🔄 Reset Chat</button>
-        </form>
+        <img src="https://raw.githubusercontent.com/cyclestar/Helpdesk/main/assets/effivity_logo.png" width="120">
+        <h3>Effivity Helpdesk AI</h3>
     </div>
     """,
     unsafe_allow_html=True,
 )
-
-# Handle reset logic
-if st.query_params.get("reset") == ["true"]:
-    st.session_state.history = []
-    st.experimental_set_query_params()
-    st.experimental_rerun()
-
 
 # --------------------------
 # 3. Load Documents
