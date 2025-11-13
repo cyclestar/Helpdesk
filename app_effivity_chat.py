@@ -46,17 +46,50 @@ st.markdown(
 )
 
 # --------------------------
-# 2. Fixed Header
+# 2. Fixed Header (Always Visible + Reset Button)
 # --------------------------
 st.markdown(
     """
+    <style>
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 85px;
+            background-color: #f0f2f6;
+            border-bottom: 1px solid #dcdcdc;
+            text-align: center;
+            z-index: 1000;
+            padding-top: 6px;
+        }
+        .main-content {
+            margin-top: 110px; /* pushes content below fixed header */
+        }
+        .reset-btn {
+            position: absolute;
+            top: 22px;
+            right: 40px;
+        }
+    </style>
+
     <div class="fixed-header">
-        <img src="https://raw.githubusercontent.com/cyclestar/Helpdesk/main/assets/effivity_logo.png" width="120">
-        <h3>Effivity Helpdesk AI 🤖</h3>
+        <img src="https://raw.githubusercontent.com/cyclestar/Helpdesk/main/assets/effivity_logo.png" width="140">
+        <h3 style="margin:2px; color:#333;">Effivity Helpdesk AI</h3>
     </div>
     """,
     unsafe_allow_html=True,
 )
+
+# Add reset chat button
+reset_col = st.columns([5, 1])
+with reset_col[1]:
+    if st.button("🔄 Reset Chat", key="reset"):
+        st.session_state.history = []
+        st.experimental_rerun()
+
+st.markdown("<div class='main-content'>", unsafe_allow_html=True)
+
 
 # --------------------------
 # 3. Load Documents
